@@ -33,7 +33,7 @@ function resetarTudo(){
   segundo = 0;
   minuto = 0;
   hora = 0;
-  display.innerHTML = segundo;
+  display.innerHTML = horaStr + ":" + minutoStr + ":" + segundoStr;
 }
 
 
