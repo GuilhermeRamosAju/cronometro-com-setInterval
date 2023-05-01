@@ -8,7 +8,7 @@ let segundo = 0;
 let intervalo = 1000;
 
 function iniciar(){
-  iniciarBtn.innerHTML ='Iniciar'
+  iniciarBtn.innerHTML ='Iniciar';
   intervaloIniciar = setInterval(() => {
     segundo++;
     if (segundo == 60){
@@ -23,11 +23,13 @@ function iniciar(){
     const minutoStr = minuto < 10 ? '0' + minuto : minuto.toString();
     const segundoStr = segundo < 10 ? '0' + segundo : segundo.toString();
     display.innerHTML = horaStr + ":" + minutoStr + ":" + segundoStr;
+    iniciarBtn.setAttribute('disabled', '');
   },1000);
 }
 function pausar(){
   clearTimeout(intervaloIniciar);
-  iniciarBtn.innerHTML = 'Continuar'
+  iniciarBtn.innerHTML = 'Continuar';
+  iniciarBtn.removeAttribute('disabled');
 }
 function resetarTudo(){
   segundo = 0;
